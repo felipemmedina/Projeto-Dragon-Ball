@@ -55,3 +55,15 @@ body{
     margin: 0 auto;
     display: block;
 }
+
+.footer__faixa{
+    background-color: black;
+    color: white;
+    padding: 60px 0 40px;
+}
+
+.footer__image{
+    max-width: 94vw;
+    margin-bottom: -55px;
+
+}
