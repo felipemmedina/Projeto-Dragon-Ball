@@ -1,0 +1,19 @@
+{
+  "name": "projeto-dragon-ball",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipemmedina/ProjetoDragonBall.git"
+  },
+  "author": "Felipe Medina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipemmedina/ProjetoDragonBall/issues"
+  },
+  "homepage": "https://github.com/felipemmedina/ProjetoDragonBall#readme"
+}
