@@ -1,5 +1,10 @@
 body{
     font-family: "Poppins", sans-serif;
+    background-image: url(../images/home-quadrinho.png);
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .header{
@@ -7,6 +12,8 @@ body{
     padding: 20px;
     color: white;
     text-align: right;
+    height: 5vh;
+    align-items: center;
 
 }
 
@@ -19,8 +26,8 @@ body{
 
 .header__nav, .header__login{
     display: flex;
-    gap: 40px;
     align-items: center;
+    gap: 40px;
 }
 
 .header__divisor{
@@ -56,6 +63,13 @@ body{
     display: block;
 }
 
+.quadrinho{
+    width: 100%;
+    display: block;
+    height: 100vh;
+    background-image: url();
+}
+
 .footer__faixa{
     background-color: black;
     color: white;
@@ -65,5 +79,4 @@ body{
 .footer__image{
     max-width: 94vw;
     margin-bottom: -55px;
-
 }
