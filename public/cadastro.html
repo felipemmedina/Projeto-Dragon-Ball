@@ -50,7 +50,7 @@
 
                 <input type="password" id="input__confirmacao" placeholder="Confirmar Senha"><br><br>
 
-                <a href="/login.html" class="cadastro__button">Cadastrar</a>
+                <a onclick="cadastrar()" class="cadastro__button">Cadastrar</a>
             </div>
         </div>
         <div class="img__cadastro">
@@ -64,7 +64,7 @@
 <script>
     function cadastrar() {
         var nome = input__nome.value;
-        var dataNascimento = input_dtNasc.value;
+        var dataNascimento = input__dtNasc.value;
         var email = input__email.value;
         var senha = input__senha.value;
         var confirmacaoSenha = input__confirmacao.value;

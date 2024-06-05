@@ -12,25 +12,25 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/components.css">
-    <script src="../scripts/quizz.js" async></script>
+    <script src="quizz.js" async></script>
 
 </head>
 <body>
     <header class="header">
         <div class="container__header">
             <nav class="header__nav">
-                <a href="/a-obra.html" class="header__link">A Obra</a>
-                <a href="/o-criador.html" class="header__link">O Criador</a>
-                <a href="/o-legado.html" class="header__link">O Legado</a>
-                <a href="/curiosidades.html" class="header__link">Curiosidades</a>
-                <a href="/desenvolvedor.html" class="header__link">Desenvolvedor</a>
+                <a href="a-obra.html" class="header__link">A Obra</a>
+                <a href="o-criador.html" class="header__link">O Criador</a>
+                <a href="o-legado.html" class="header__link">O Legado</a>
+                <a href="curiosidades.html" class="header__link">Curiosidades</a>
+                <a href="desenvolvedor.html" class="header__link">Desenvolvedor</a>
             </nav>
 
             <span class="header__divisor"></span>
 
             <div class="header__login">
-                <a href="/login.html" class="header__link">Login</a>
-                <a href="/cadastro.html" class="header__button">Cadastre-se</a>
+                <a href="login.html" class="header__link">Login</a>
+                <a href="cadastro.html" class="header__button">Cadastre-se</a>
             </div>
         </div>
     </header>
@@ -51,3 +51,8 @@
     </div>
 </body>
 </html>
+<script>
+    (() => {
+        if (sessionStorage.ID_USUARIO == null) window.location = "login.html";
+    })();
+</script>

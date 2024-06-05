@@ -141,7 +141,7 @@ function saveUserScore() {
         },
         body: JSON.stringify({
             // NO LOGIN TEM QUE INSERIR O ID DO USUARIO NO SESSION STORAGE 
-            idUsuario: sessionStorage.USER_ID,
+            idUsuario: sessionStorage.ID_USUARIO,
             pontuacao: totalCorrect,
             nivel: level
         }),
