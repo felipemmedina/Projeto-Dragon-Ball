@@ -13,9 +13,30 @@ body{
     color: #FFFFFF;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.container__header{
+    margin: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.header{
+    background-color: #1C4595;
+    padding: 20px;
+    color: white;
+    text-align: right;
+    width: 100vw;
+    height: 10vh;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+}
+
 .container{
     background-color: #121214;
     width: 90%;

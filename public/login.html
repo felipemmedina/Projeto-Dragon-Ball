@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" type="text/css" href="./styles/tns.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <a href="/a-obra.html" class="header__link">A Obra</a>
+                <a href="/o-criador.html" class="header__link">O Criador</a>
+                <a href="/o-legado.html" class="header__link">O Legado</a>
+                <a href="/curiosidades.html" class="header__link">Curiosidades</a>
+                <a href="/desenvolvedor.html" class="header__link">Desenvolvedor</a>
+            </nav>
+
+            <span class="header__divisor"></span>
+
+            <div class="header__login">
+                <a href="/login.html" class="header__link">Login</a>
+            </div>
+        </div>
+    </header>
+    <div class="containerFormularioImg">
+        <div class="login">
+            <div class="login__registro">
+                <h2 class="login__title">Cadastre-se para<br>
+                    jogar e fazer parte <br>
+                    da comunidade!<br><br></h2>
+                <input type="text" id="input__nome" placeholder="Nome de usuário"><br><br>
+
+                <input type="password" id="input__senha" placeholder="Senha"><br><br>
+
+
+                <a href="/login.html" class="login__button">Entrar</a>
+            </div>
+        </div>
+        <div class="img__login">
+            <img src="./images/login-vegeta.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+        var nome = input__nome.value;
+        var dataNascimento = input_dtNasc.value;
+        var email = input__email.value;
+        var senha = input__senha.value;
+        var confirmacaoSenha = input__confirmacao.value;
+
+        if (
+            nome == "" ||
+            dataNascimento == "" ||
+            email == "" ||
+            senha == "" ||
+            confirmacaoSenha == ""
+        ) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML = "Preencha todos os campos";
+            return;
+        }
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nome: nome,
+                dataNascimento: dataNascimento,
+                email: email,
+                senha: senha
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "1000");
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+        return;
+    }
+</script>

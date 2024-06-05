@@ -86,30 +86,39 @@ function finishGame(){
             break
         case (performance === 90):
             message = "Você atingiu o Instinto Superior Incompleto!"
+            level = "INSTINTO SUPERIOR IMCOMPLETO"
             break
         case (performance === 80):
             message = "Você atingiu o Super Saiyajin Blue com Kaioken!"
+            level = "SUPER SAIYAJIN BLUE COM KAIOKEN"
             break
         case (performance === 70):
             message = "Você atingiu o Super Saiyajin Blue!"
+            level = "SUPER SAIYAJIN BLUE"
             break
         case (performance === 60):
             message = "Você atingiu o Super Saiyajin God!"
+            level = "SUPER SAIYAJIN GOD"
             break
         case (performance === 50):
             message = "Você atingiu o Super Saiyajin 3!"
+            level = "SUPER SAIYAJIN 3"
             break
         case (performance === 40):
             message = "Você atingiu o Super Saiyajin 2!"
+            level = "SUPER SAIYAJIN 2"
             break
         case (performance === 30):
             message = "Você atingiu o Super Saiyajin!"
+            level = "SUPER SAIYAJIN"
             break
         case (performance === 20):
             message = "Você atingiu o Kaioken!"
+            level = "KAIOKEN"
             break
         case (performance === 10):
             message = "Você atingiu a forma base!"
+            level = "FORMA BASE"
             break
         default:
                 message = "Há muito que melhorar :(!"

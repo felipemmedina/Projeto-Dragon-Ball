@@ -1,0 +1,26 @@
+.criador__title{
+    color: #000000;
+    font-weight: 900;
+    font-size: 130px;
+    text-transform: uppercase;
+}
+.criador{
+    background-color: #FFFFFF;
+    max-width: 100%;
+    height: 90vh;
+    flex-direction: row;
+}
+
+.criador__capa{
+    height: 80vh;
+    max-width: 100%;
+    background-size: 100%;
+}
+
+.criador__akira{
+    max-width: 600px;
+    max-height: 100%;
+    top: 0;
+    flex-direction: row-reverse;
+
+}
