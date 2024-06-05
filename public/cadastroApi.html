@@ -100,6 +100,7 @@
 
 <script>
   function cadastrar() {
+    aguardar();
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
@@ -119,6 +120,7 @@
       mensagem_erro.innerHTML =
         "(Mensagem de erro para todos os campos em branco)";
 
+      finalizarAguardar();
       return false;
     } else {
       setInterval(sumirMensagem, 5000);
@@ -153,12 +155,14 @@
           }, "2000");
 
           limparFormulario();
+          finalizarAguardar();
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
       })
       .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
       });
 
     return false;

@@ -1,4 +1,4 @@
-var pontuacaoModel = require("./models/pontuacaoModel");
+var pontuacaoModel = require("../models/pontuacaoModel");
 
 function inserirPontuacao(req, res) {
     var idUsuario = req.body.idUsuario;
