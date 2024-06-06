@@ -3,6 +3,7 @@
     font-weight: 900;
     font-size: 130px;
     text-transform: uppercase;
+    text-align: justify;
 }
 /*.curiosidades{
     background-color: #FFFFFF;
@@ -15,4 +16,37 @@
     height: 80vh;
     max-width: 100%;
     background-size: 100%;
+}
+
+.curiosidades__container{
+    background-color: rgb(28, 69, 149, 0.67);
+    display: flex;
+    padding: 50px;
+    border-radius: 40px;
+    text-align: justify;
+    gap: 35px;
+    margin-top: 90px;
+    color: #FFFFFF;
+}
+
+.curiosidades__title__conteudo{
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.curiosidades__descricao{
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.curiosidades__container2{
+    background-color: rgba(255, 153, 36, 0.67);
+    display: flex;
+    padding: 50px;
+    border-radius: 40px;
+    text-align: justify;
+    gap: 35px;
+    margin-top: 90px;
+    color: #000000;
 }

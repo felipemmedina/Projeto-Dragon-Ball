@@ -36,3 +36,10 @@
     text-align: justify;
     margin-top: 80px;
 }
+
+.legado__onepiece{
+    display: flex;
+    background-color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+}

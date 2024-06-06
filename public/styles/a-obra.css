@@ -37,14 +37,42 @@
     text-align: justify;
 }
 
-.animes{
-    position: relative;
-    text-align: center;
-    padding-bottom: 90px;
-    padding-top: 170px;
-    background-color: #1C4595;
-    position: absolute;
+.container__div{
     left: 0;
     bottom: 0;
-    opacity: 67%;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+.anime__container{
+    background-color: #FFFFFF;
+    display: flex;
+    padding: 50px;
+    border-radius: 40px;
+    text-align: justify;
+    gap: 35px;
+    margin-top: 90px;
+}
+
+.anime__title{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.anime__descricao{
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.animes__fundo{ height: fit-content;
+    margin-top: 15vh;
+    padding-top: 2vh;
+    padding-bottom: 15vh;
+    width: 100%;
+    background-color: rgba(255, 153, 36, 0.67);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
 }

@@ -8,6 +8,15 @@ button{
     cursor: pointer;
 }
 
+.header{
+    margin: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 75px;
+}
+
 body{
     background-image: url(../images/home-quadrinho.png);
     color: #FFFFFF;
@@ -22,35 +31,6 @@ body{
     top: 0;
     left: 0;
     position: fixed;
-}
-
-.header{
-    background-color: #1C4595;
-    padding: 20px;
-    color: white;
-    text-align: right;
-    width: 100vw;
-    height: 10vh;
-    align-items: center;
-    position: fixed;
-    top: 0;
-
-}
-
-.container{
-    background-color: #121214;
-    width: 90%;
-    max-width: 800px;
-
-    border: 2px solid #FF9922;
-    border-radius: 6px;
-    padding: 16px;
-    box-shadow: 0 0 2px 2px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .questions-container{
@@ -120,4 +100,34 @@ body{
 .final-message span{
     display: block;
     margin: 8px;
+}
+
+.quizz__container{
+    position: relative;
+    background-color: #121214;
+    width: 90%;
+    max-width: 800px;
+
+    border: 2px solid #FF9922;
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow: 0 0 2px 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizz__dragao{
+    position: absolute;
+    left: 0;
+    top: -50px;
+    max-width: 120px;
+    height: auto;
+}
+
+.controls-container{
+    text-align: center;
+    
 }

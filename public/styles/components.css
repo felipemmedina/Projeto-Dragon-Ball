@@ -14,12 +14,24 @@ body{
     text-align: right;
     height: 5vh;
     align-items: center;
+    display: flex;
 
+}
+
+.header__content{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header__logo{
+    max-width: 150px;
+    height: auto;
 }
 
 .header .container{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Legado</title>
+    <title>Personagens</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,10 +12,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/components.css">
-    <link rel="stylesheet" href="./styles/o-legado.css">
+    <link rel="stylesheet" href="./styles/personagens.css">
     <link rel="icon" href="./images/logo-esfera.png" type="image/x-icon">
 </head>
-
 <body>
 
     <header class="header">
@@ -36,33 +35,51 @@
             </div>
         </div>
     </header>
+
     <div>
-        <img src="./images/legado-capa.png" alt="" class="legado__capa">
+        <img src="./images/curiosidades-capa.png" alt="" class="curiosidades__capa">
     </div>
-    <div class="legado">
-        <div class="legado__txt">
-            <h1 class="legado__title">o legado</h1>
-            <p>
-                Dragon Ball é responsável por popularizar o estilo shonen, atualmente um dos mais populares no Japão e
-                no
-                mundo. Esse estilo tem como público-alvo meninos adolescentes; artes marciais, esportes e fantasia são
-                temas
-                frequentes. As histórias geralmente são de aventura, com foco em cenas de ação, amizade, superação e
-                desenvolvimento pessoal.
-                <br> <br>
-                A franquia colocou personagens e frases no imaginário popular o ataque Kamehamehae e a forma Super
-                Saiyajin são dois conceitos que qualquer pessoa nascida nos anos 90 reconhece com facilidade. Dragon
-                Ball é
-                um dos grandes hits internacionais da cultura do Japão.
-            </p>
-        </div>
-        <img src="./images/legado-anjo.png" alt="" class="legado__anjo">
+    <div class="personagens">
+        <h1 class="personagem__title">escolha seu personagem favorito!</h1>
     </div>
-    <div class="legado__onepiece">
-        <img src="images/legado-onepiece.png" alt="">
+    
+    <div class="firstCardsContainer">
+        <div class="card" onclick="curtir(1)"><a href="#graph">
+            <div class="cardTitle"><h3>Goku</h3></div>
+            <div class="imgContainer imgGoku"></div>
+        </a></div>
+
+        <div class="card" onclick="curtir(2)"><a href="#graph">
+            <div class="cardTitle"><h3>Vegeta</h3></div>
+            <div class="imgContainer imgVegeta"></div>
+        </a></div>
+
+        <div class="card" onclick="curtir(3)"><a href="#graph">
+            <div class="cardTitle"><h3>Gohan</h3></div>
+            <div class="imgContainer imgGohan"></div>
+        </a></div>
     </div>
 
-    
+    <div class="secondCardsContainer">
+        <div class="card" onclick="curtir(4)"><a href="#graph">
+            <div class="cardTitle"><h3>Piccolo</h3></div>
+            <div class="imgContainer imgPiccolo"></div>
+        </a></div>
+
+        <div class="card" onclick="curtir(5)"><a href="#graph">
+            <div class="cardTitle"><h3>Frezza</h3></div>
+            <div class="imgContainer imgFrezza"></div>
+        </a></div>
+
+        <div class="card" onclick="curtir(6)"><a href="#graph">
+            <div class="cardTitle"><h3>Trunks</h3></div>
+            <div class="imgContainer imgTrunks"></div>
+        </a></div>
+    </div>
+
+    <div id="graph">
+        <canvas id="myChart" style="width: 60rem; height: 100%"></canvas>
+    </div>
 
     <footer class="footer">
         <img src="./images/footer-goku.png" class="footer__image" alt="">

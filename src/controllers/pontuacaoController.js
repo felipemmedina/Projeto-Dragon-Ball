@@ -15,7 +15,7 @@ function inserirPontuacao(req, res) {
         pontuacaoModel.inserirPontuacao(idUsuario, pontuacao, nivel)
             .then(
                 function (resultado) {
-                    res.json(resultado);
+                    res.status(200);
                 }
             ).catch(
                 function (erro) {
