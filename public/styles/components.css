@@ -92,3 +92,9 @@ body{
     max-width: 94vw;
     margin-bottom: -55px;
 }
+
+.footer__text span{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}

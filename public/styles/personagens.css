@@ -6,10 +6,11 @@
     text-align: justify;
 }
 
-.curiosidades__capa{
-    height: 80vh;
+.dashboard__capa{
+    height: 90vh;
     max-width: 100%;
     background-size: 100%;
+    width: 100%;
 }
 
 .personagens{
@@ -71,29 +72,34 @@
     background-size: cover;
 }
 .imgGoku {
-    background-image: url(https://i.pinimg.com/474x/https://dragonball.guru/wp-content/uploads/2021/01/goku-dragon-ball-guru-824x490.jpg/c0/f3/c0c0f3824805ad8075e555b41aeda59e.jpg);
+    background-image: url(https://pbs.twimg.com/media/GIOboyqXIAIX6VM?format=png&name=900x900);
     /* width: 100%;
     height: 100%;
     object-fit: cover; */
 }
 
+#graph{
+    background-color: #FFFFFF;
+}
+
 .imgVegeta {
-    background-image: url(https://wallpapercave.com/wp/wp9124085.jpg);
+    background-image: url(https://pbs.twimg.com/media/FidlHpiXEAAVcoq?format=jpg&name=900x900);
 }
 
 .imgGohan {
-    background-image: url(https://i.pinimg.com/736x/78/09/35/7809357a1be1410f5414f57815c1efef.jpg);
+    background-image: url(https://pbs.twimg.com/media/GPPIRTeXMAE6XI5?format=jpg&name=900x900);
     
 }
 
 .imgPiccolo {
-    background-image: url(https://images.hdqwalls.com/wallpapers/arya-stark-game-of-thrones-season-8-y3.jpg);
+    background-image: url(https://assets.mycast.io/actor_images/actor-piccolo-dragon-ball-129934_large.jpg?1601272982);
 }
 
 .imgFrezza {
-    background-image: url(https://static01.nyt.com/images/2017/08/29/arts/television/29samwell-qa/29samwell-qa-videoSixteenByNineJumbo1600.jpg);
+    background-image: url(https://i.pinimg.com/564x/e8/e6/e2/e8e6e2e2995847bbc94d82141d820426.jpg);
 }
 
 .imgTrunks {
-    background-image: url(https://wallpaperaccess.com/full/1787300.jpg);
+    background-image: url(https://pbs.twimg.com/media/GMOX4LJWMAEfc2z?format=jpg&name=900x900);
 }
+

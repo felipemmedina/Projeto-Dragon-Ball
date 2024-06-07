@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    overflow: hidden;
+}
+
 .login__button{
     background-color: #1C4595;
     color: white;
@@ -11,6 +16,7 @@
     font-size: 18px;
     padding: 10px 20px;
     border-radius: 40px;
+    cursor: pointer;
 }
 .login{
     width: 25%;
@@ -25,15 +31,53 @@
     margin-bottom: 50px;
 }
 .img__login{
-    width: 50%;
-    /* height: 250px; */
-    /* position: absolute; */
-    /* top: 0;
-    right: 120px; */
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-right: 10%;
+    max-width: 300px;
+    max-height: 100%;
+    height: 100vh;
+}
+
+.img__login img{
+    width: 550px;
+    height: auto;
+}
+
+.login__title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.login__registro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login__registro input{
+    width: 280px;
+    height: 35px;
+    border-radius: 5px;
+    border-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.login__registro input::placeholder{
+    text-align: center;
 }
 .containerFormularioImg {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.login__registro img{
+    width: 400px;
+    height: auto;
 }

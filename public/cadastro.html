@@ -17,21 +17,32 @@
     <link rel="icon" href="./images/logo-esfera.png" type="image/x-icon">
 </head>
 
-<body>
+<script src="./js/sessao.js"></script>
+
+<body onload="validarSessao()">
     <header class="header">
         <div class="container">
-            <nav class="header__nav">
-                <a href="/a-obra.html" class="header__link">A Obra</a>
-                <a href="/o-criador.html" class="header__link">O Criador</a>
-                <a href="/o-legado.html" class="header__link">O Legado</a>
-                <a href="/curiosidades.html" class="header__link">Curiosidades</a>
-                <a href="/desenvolvedor.html" class="header__link">Desenvolvedor</a>
-            </nav>
-
-            <span class="header__divisor"></span>
-
-            <div class="header__login">
-                <a href="/login.html" class="header__link">Login</a>
+            <a href="index.html">
+                <img src="./images/logo-fm.jpg" alt="" class="header__logo">
+            </a>
+            <div class="header__content">
+                    <nav class="header__nav">
+                        <a href="a-obra.html" class="header__link">A Obra</a>
+                        <a href="o-criador.html" class="header__link">O Criador</a>
+                        <a href="o-legado.html" class="header__link">O Legado</a>
+                        <a href="curiosidades.html" class="header__link">Curiosidades</a>
+                        <a href="desenvolvedor.html" class="header__link">Desenvolvedor</a>
+                        <a id="quiz-header" href="quizz.html" class="header__link">Quiz</a>
+                        <a id="dashboard-header" href="dashboard.html" class="header__link">Personagens</a>
+                    </nav>
+        
+                    <span class="header__divisor"></span>
+        
+                    <div class="header__login">
+                        <a href="/login.html" class="header__link">Login</a>
+                        <a href="/cadastro.html" class="header__button">Cadastre-se</a>
+                        <a id="sair-header" class="header__link" style="cursor: pointer;" onclick="limparSessao()">Sair</a>
+                    </div>
             </div>
         </div>
     </header>
@@ -42,8 +53,6 @@
                     jogar e fazer parte <br>
                     da comunidade!<br><br></h2>
                 <input type="text" id="input__nome" placeholder="Nome de usuário"><br><br>
-
-                <input type="date" id="input__dtNasc" placeholder="Data de nascimento"><br><br>
 
                 <input type="email" id="input__email" placeholder="Email"><br><br>
 
@@ -65,14 +74,12 @@
 <script>
     function cadastrar() {
         var nome = input__nome.value;
-        var dataNascimento = input__dtNasc.value;
         var email = input__email.value;
         var senha = input__senha.value;
         var confirmacaoSenha = input__confirmacao.value;
 
         if (
             nome == "" ||
-            dataNascimento == "" ||
             email == "" ||
             senha == "" ||
             confirmacaoSenha == ""
@@ -91,7 +98,6 @@
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
                 nome: nome,
-                dataNascimento: dataNascimento,
                 email: email,
                 senha: senha
             }),

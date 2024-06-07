@@ -42,4 +42,100 @@
     background-color: #FFFFFF;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
+}
+
+.legado__2{
+    background-color: rgba(28, 69, 149, 0.67);
+    max-width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.legado__txt2{
+    width: 700px;
+    height: 700px;
+    font-size: 48px;
+    text-align: justify;
+    margin-top: 80px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.legado__autor{
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: start;
+    width: 700px;
+    margin-bottom: 30px;
+}
+
+.legado__autor__descricao{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: start;
+    width: 700px;
+}
+
+.legado__referencias__fundo{
+    background-color: #FF9922;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstCardsContainer {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    width: 20%;
+    height: 80%;
+    border: 2px solid #FF9922;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.cardTitle {
+    width: 100%;
+    height: 20%;
+    background-color: #1C4595;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+}
+.imgKND {
+    background-image: url(../images/legado-knd.webp);
+    /* width: 100%;
+    height: 100%;
+    object-fit: cover; */
+}
+
+.imgJovensTitas {
+    background-image: url(../images/legado-jovenstitas.webp);
+}
+
+.imgGumball {
+    background-image: url(../images/legado-gumball.webp);
+    
 }

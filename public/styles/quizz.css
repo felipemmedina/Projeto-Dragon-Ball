@@ -42,7 +42,8 @@ body{
     gap: 24px;
 }
 
-.question{
+.question,
+.score-title {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -52,6 +53,12 @@ body{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.scores-historic-container {
+    width: 100%;
+    display: grid;
     gap: 16px;
 }
 

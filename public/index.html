@@ -17,11 +17,13 @@
     <link rel="icon" href="./images/logo-esfera.png" type="image/x-icon">
 </head>
 
-<body>
+<script src="./js/sessao.js"></script>
+
+<body onload="validarSessao()">
 
     <header class="header">
         <div class="container">
-            <img src="./images/Logo-site.png" alt="" class="header__logo">
+            <img src="./images/logo-fm.jpg" alt="" class="header__logo">
             <div class="header__content">
                     <nav class="header__nav">
                         <a href="a-obra.html" class="header__link">A Obra</a>
@@ -29,6 +31,8 @@
                         <a href="o-legado.html" class="header__link">O Legado</a>
                         <a href="curiosidades.html" class="header__link">Curiosidades</a>
                         <a href="desenvolvedor.html" class="header__link">Desenvolvedor</a>
+                        <a id="quiz-header" href="quizz.html" class="header__link">Quiz</a>
+                        <a id="dashboard-header" href="dashboard.html" class="header__link">Personagens</a>
                     </nav>
         
                     <span class="header__divisor"></span>
@@ -36,6 +40,7 @@
                     <div class="header__login">
                         <a href="/login.html" class="header__link">Login</a>
                         <a href="/cadastro.html" class="header__button">Cadastre-se</a>
+                        <a id="sair-header" class="header__link" style="cursor: pointer;" onclick="limparSessao()">Sair</a>
                     </div>
             </div>
         </div>
@@ -76,8 +81,11 @@
                 Entre na comunidade <br> de fãs de Dragon Ball
             </h1>
             <span class="quiz__opiniao__subtitle">
-                Compartilhe seu personagenm favoritos nessa pesquisa de opinião e descubra quem mais concorda com você!
+                Compartilhe seu personagem favorito nessa pesquisa <br>de opinião e descubra quem mais concorda com você!
             </span>
+            <a href="dashboard.html" class="quizz__button__opiniao">
+                Responder
+            </a>
         </div>
     </div>
     <div class="noticias">
@@ -134,9 +142,9 @@
         <div class="footer__faixa">
             <div class="container">
                 <p class="footer__text">
-                    Felipe Medina
-                    E-mail: felipe.medina@sptech.school
-                    Frase Dragon Ball
+                    <span>Feito por Felipe Medina <br></span>
+                    <span>E-mail: felipe.medina@sptech.school <br></span>
+                    <span>Sempre unidos vamos triunfar!</span>
                 </p>
             </div>
         </div>

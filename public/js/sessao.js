@@ -1,20 +1,24 @@
 // sessão
 function validarSessao() {
-    var email = sessionStorage.EMAIL_USUARIO;
-    var nome = sessionStorage.NOME_USUARIO;
+    const idUsuario = sessionStorage.ID_USUARIO;
+    const quizHeader = document.getElementById("quiz-header");      
+    const dashboardHeader = document.getElementById("dashboard-header");
+    const sairHeader = document.getElementById("sair-header");
 
-    var b_usuario = document.getElementById("b_usuario");
-
-    if (email != null && nome != null) {
-        b_usuario.innerHTML = nome;
+    if (idUsuario != null) {    
+        quizHeader.style.display = "block";
+        dashboardHeader.style.display = "block";
+        sairHeader.style.display = "block";
     } else {
-        window.location = "../login.html";
+        quizHeader.style.display = "none";
+        dashboardHeader.style.display = "none";
+        sairHeader.style.display = "none";
     }
 }
 
 function limparSessao() {
     sessionStorage.clear();
-    window.location = "../login.html";
+    window.location = "./index.html";
 }
 
 // carregamento (loading)

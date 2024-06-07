@@ -15,23 +15,34 @@
     <link rel="stylesheet" href="./styles/a-obra.css">
     <link rel="icon" href="./images/logo-esfera.png" type="image/x-icon">
 </head>
-<body>
+
+<script src="./js/sessao.js"></script>
+
+<body onload="validarSessao()">
 
     <header class="header">
         <div class="container">
-            <nav class="header__nav">
-                <a href="/a-obra.html" class="header__link">A Obra</a>
-                <a href="/o-criador.html" class="header__link">O Criador</a>
-                <a href="/o-legado.html" class="header__link">O Legado</a>
-                <a href="/curiosidades.html" class="header__link">Curiosidades</a>
-                <a href="/desenvolvedor.html" class="header__link">Desenvolvedor</a>
-            </nav>
-
-            <span class="header__divisor"></span>
-
-            <div class="header__login">
-                <a href="/login.html" class="header__link">Login</a>
-                <a href="/cadastro.html" class="header__button">Cadastre-se</a>
+            <a href="index.html">
+                <img src="./images/logo-fm.jpg" alt="" class="header__logo">
+            </a>
+            <div class="header__content">
+                    <nav class="header__nav">
+                        <a href="a-obra.html" class="header__link">A Obra</a>
+                        <a href="o-criador.html" class="header__link">O Criador</a>
+                        <a href="o-legado.html" class="header__link">O Legado</a>
+                        <a href="curiosidades.html" class="header__link">Curiosidades</a>
+                        <a href="desenvolvedor.html" class="header__link">Desenvolvedor</a>
+                        <a id="quiz-header" href="quizz.html" class="header__link">Quiz</a>
+                        <a id="dashboard-header" href="dashboard.html" class="header__link">Personagens</a>
+                    </nav>
+        
+                    <span class="header__divisor"></span>
+        
+                    <div class="header__login">
+                        <a href="/login.html" class="header__link">Login</a>
+                        <a href="/cadastro.html" class="header__button">Cadastre-se</a>
+                        <a id="sair-header" class="header__link" style="cursor: pointer;" onclick="limparSessao()">Sair</a>
+                    </div>
             </div>
         </div>
     </header>
@@ -42,95 +53,188 @@
         <div class="obra__txt">
             <h1 class="obra__title">a obra</h1>
             <p>
-    
-                Dragon Ball é uma das franquias mais icônicas e duradouras do mundo, cativando gerações de fãs desde sua criação em 1984 por Akira Toriyama. Com suas histórias épicas, personagens carismáticos e intensas batalhas, a série evoluiu e se expandiu ao longo dos anos, originando vários animes, filmes e jogos que continuam a influenciar a cultura pop globalmente. Abaixo, explore a cronologia das adaptações de Dragon Ball e descubra como cada série contribuiu para o legado desta saga.
-                
-                </p>
+
+                Dragon Ball é uma das franquias mais icônicas e duradouras do mundo, cativando gerações de fãs desde sua
+                criação em 1984 por Akira Toriyama. Com suas histórias épicas, personagens carismáticos e intensas
+                batalhas, a série evoluiu e se expandiu ao longo dos anos, originando vários animes, filmes e jogos que
+                continuam a influenciar a cultura pop globalmente. Abaixo, explore a cronologia das adaptações de Dragon
+                Ball e descubra como cada série contribuiu para o legado desta saga.
+
+            </p>
         </div>
-        <img src="./images/obra-manga.webp" alt="" class="obra__manga">    
+        <img src="./images/obra-manga.webp" alt="" class="obra__manga">
     </div>
     <div class="animes__fundo">
 
-    <div class="animes">
-        <div class="container">
-            <div class="anime__conteudo">
-                <div class="anime__container">
-                    <img src="./images/obra-db.png" alt="">
-                    <div class="anime__container-conteudo">
-                        <h3 class="anime__title">Dragon Ball (1986-1989)</h3>
-                        <p class="anime__descricao">Baseado nos primeiros arcos do mangá de Akira Toriyama, o anime "Dragon Ball" segue as aventuras de Son Goku desde sua infância. Goku, um jovem com rabo de macaco, parte em busca das sete Esferas do Dragão, que podem realizar qualquer desejo. Ele faz novos amigos, enfrenta inimigos poderosos e participa de torneios de artes marciais. Inspirado pelo clássico chinês "Jornada ao Oeste" e os filmes de Jackie Chan, "Dragon Ball" combina humor, ação e fantasia, estabelecendo a base para a franquia.
-                        </p>
+        <div class="animes">
+            <div class="container">
+                <div class="anime__conteudo">
+                    <div class="anime__container">
+                        <img src="./images/obra-db.png" alt="">
+                        <div class="anime__container-conteudo">
+                            <h3 class="anime__title">Dragon Ball (1986-1989)</h3>
+                            <p class="anime__descricao">Baseado nos primeiros arcos do mangá de Akira Toriyama, o anime
+                                "Dragon Ball" segue as aventuras de Son Goku desde sua infância. Goku, um jovem com rabo
+                                de macaco, parte em busca das sete Esferas do Dragão, que podem realizar qualquer
+                                desejo. Ele faz novos amigos, enfrenta inimigos poderosos e participa de torneios de
+                                artes marciais. Inspirado pelo clássico chinês "Jornada ao Oeste" e os filmes de Jackie
+                                Chan, "Dragon Ball" combina humor, ação e fantasia, estabelecendo a base para a
+                                franquia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="animes">
+            <div class="container">
+                <div class="anime__conteudo">
+                    <div class="anime__container">
+                        <img src="./images/obra-dbz.png" alt="">
+                        <div class="anime__container-conteudo">
+                            <h3 class="anime__title">Dragon Ball Z (1989-1996):</h3>
+                            <p class="anime__descricao">"Dragon Ball Z" continua a história com Goku adulto,
+                                introduzindo novos personagens e vilões, como os Saiyajins, Freeza, Cell e Majin Buu. A
+                                série é conhecida por suas intensas batalhas, transformações e aumento de poder dos
+                                personagens. Explora temas intergalácticos e conceitos como a fusão e as transformações
+                                Super Saiyajin. "Dragon Ball Z" solidificou seu status como um dos animes mais populares
+                                e influentes de todos os tempos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="animes">
+            <div class="container__div">
+                <div class="anime__conteudo">
+                    <div class="anime__container">
+                        <img src="./images/obra-dbgt.png" alt="">
+                        <div class="anime__container-conteudo">
+                            <h3 class="anime__title">Dragon Ball GT (1996-1997):</h3>
+                            <p class="anime__descricao">"Dragon Ball GT" é uma série original que continua a história
+                                após "Dragon Ball Z", sem o mangá de Toriyama. Goku é transformado em criança devido a
+                                um desejo acidental, iniciando novas aventuras intergalácticas. Enfrentam inimigos como
+                                Baby, Super 17 e os Dragões das Esferas do Dragão corrompidas. Embora tenha recebido
+                                críticas mistas, "Dragon Ball GT" introduziu a transformação Super Saiyajin 4.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="animes">
+            <div class="container">
+                <div class="anime__conteudo">
+                    <div class="anime__container">
+                        <img src="./images/obra-dbkai.png" alt="">
+                        <div class="anime__container-conteudo">
+                            <h3 class="anime__title">Dragon Ball Kai (2009-2011, 2014-2015):</h3>
+                            <p class="anime__descricao">"Dragon Ball Kai" é uma versão remasterizada e reeditada de
+                                "Dragon Ball Z", lançada para comemorar o 20º aniversário da série. Apresenta animação
+                                melhorada e cortes na narrativa para remover fillers, tornando a história mais fiel ao
+                                mangá original. Foi bem recebida pelos fãs que apreciaram a narrativa mais concisa e a
+                                qualidade de imagem aprimorada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="animes">
+            <div class="container">
+                <div class="anime__conteudo">
+                    <div class="anime__container">
+                        <img src="./images/obra-dbs.png" alt="">
+                        <div class="anime__container-conteudo">
+                            <h3 class="anime__title">Dragon Ball Super (2015-2018):</h3>
+                            <p class="anime__descricao">"Dragon Ball Super" continua a história após "Dragon Ball Z",
+                                com o envolvimento direto de Akira Toriyama. Introduz novos arcos como a Batalha dos
+                                Deuses, o Renascimento de Freeza, o Torneio de Poder e a Saga de Trunks do Futuro.
+                                Explora novos níveis de poder, incluindo as transformações Super Saiyajin Deus e Super
+                                Saiyajin Blue. Expande ainda mais o universo com o conceito de múltiplos universos.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="animes">
-        <div class="container">
-            <div class="anime__conteudo">
-                <div class="anime__container">
-                    <img src="./images/obra-dbz.png" alt="">
-                    <div class="anime__container-conteudo">
-                        <h3 class="anime__title">Dragon Ball Z (1989-1996):</h3>
-                        <p class="anime__descricao">"Dragon Ball Z" continua a história com Goku adulto, introduzindo novos personagens e vilões, como os Saiyajins, Freeza, Cell e Majin Buu. A série é conhecida por suas intensas batalhas, transformações e aumento de poder dos personagens. Explora temas intergalácticos e conceitos como a fusão e as transformações Super Saiyajin. "Dragon Ball Z" solidificou seu status como um dos animes mais populares e influentes de todos os tempos.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <div class="personagens">
+        <h1 class="personagens__title">personagens</h1>
     </div>
-    <div class="animes">
-        <div class="container__div">
-            <div class="anime__conteudo">
-                <div class="anime__container">
-                    <img src="./images/obra-dbgt.png" alt="">
-                    <div class="anime__container-conteudo">
-                        <h3 class="anime__title">Dragon Ball GT (1996-1997):</h3>
-                        <p class="anime__descricao">"Dragon Ball GT" é uma série original que continua a história após "Dragon Ball Z", sem o mangá de Toriyama. Goku é transformado em criança devido a um desejo acidental, iniciando novas aventuras intergalácticas. Enfrentam inimigos como Baby, Super 17 e os Dragões das Esferas do Dragão corrompidas. Embora tenha recebido críticas mistas, "Dragon Ball GT" introduziu a transformação Super Saiyajin 4.
-                        </p>
-                    </div>
+
+    <div class="firstCardsContainer">
+        <div class="card">
+                <div class="cardTitle">
+                    <h3>Goku</h3>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="animes">
-        <div class="container">
-            <div class="anime__conteudo">
-                <div class="anime__container">
-                    <img src="./images/obra-dbkai.png" alt="">
-                    <div class="anime__container-conteudo">
-                        <h3 class="anime__title">Dragon Ball Kai (2009-2011, 2014-2015):</h3>
-                        <p class="anime__descricao">"Dragon Ball Kai" é uma versão remasterizada e reeditada de "Dragon Ball Z", lançada para comemorar o 20º aniversário da série. Apresenta animação melhorada e cortes na narrativa para remover fillers, tornando a história mais fiel ao mangá original. Foi bem recebida pelos fãs que apreciaram a narrativa mais concisa e a qualidade de imagem aprimorada.
-                        </p>
-                    </div>
+                <div class="imgContainer imgGoku"></div>
+            </a></div>
+
+        <div class="card">
+                <div class="cardTitle">
+                    <h3>Vegeta</h3>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="animes">
-        <div class="container">
-            <div class="anime__conteudo">
-                <div class="anime__container">
-                    <img src="./images/obra-dbs.png" alt="">
-                    <div class="anime__container-conteudo">
-                        <h3 class="anime__title">Dragon Ball Super (2015-2018):</h3>
-                        <p class="anime__descricao">"Dragon Ball Super" continua a história após "Dragon Ball Z", com o envolvimento direto de Akira Toriyama. Introduz novos arcos como a Batalha dos Deuses, o Renascimento de Freeza, o Torneio de Poder e a Saga de Trunks do Futuro. Explora novos níveis de poder, incluindo as transformações Super Saiyajin Deus e Super Saiyajin Blue. Expande ainda mais o universo com o conceito de múltiplos universos.
-                        </p>
-                    </div>
+                <div class="imgContainer imgVegeta"></div>
+            </a></div>
+
+        <div class="card">
+                <div class="cardTitle">
+                    <h3>Gohan</h3>
                 </div>
-            </div>
-        </div>
+                <div class="imgContainer imgGohan"></div>
+            </a></div>
     </div>
-</div>
+
+    <div class="secondCardsContainer">
+        <div class="card">
+                <div class="cardTitle">
+                    <h3>Piccolo</h3>
+                </div>
+                <div class="imgContainer imgPiccolo"></div>
+            </a></div>
+
+        <div class="card">
+                <div class="cardTitle">
+                    <h3>Frezza</h3>
+                </div>
+                <div class="imgContainer imgFrezza"></div>
+            </a></div>
+
+        <div class="card">
+                <div class="cardTitle">
+                    <h3>Trunks</h3>
+                </div>
+                <div class="imgContainer imgTrunks"></div>
+            </a></div>
+    </div>
+
+    <div class="obra">
+        <div class="obra__txt">
+            <h1 class="obra__title__onu">objetivos de desenvolvimento sustentável da onu</h1>
+            <p>
+
+                Objetivo 15. <span>Vida terrestre.</span>Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres, gerir de forma sustentável as florestas, combater a desertificação, deter e reverter a degradação da terra e deter a perda de biodiversidade. <br> <br>
+
+                O <span>Android Número 16</span> tem como personalidade
+                a gentileza e o amor pela Natureza: Ao contrário dos outros andróides, o Número 16 é pacífico e tem um grande amor pela natureza e pelos animais. Ele evita lutar sempre que possível e prefere resolver conflitos de maneira não violenta.
+
+            </p>
+        </div>
+        <img src="./images/obra-n16.jpg" alt="" class="obra__n16">
+    </div>
+
 
     <footer class="footer">
         <img src="./images/footer-goku.png" class="footer__image" alt="">
         <div class="footer__faixa">
             <div class="container">
                 <p class="footer__text">
-                    Felipe Medina
-                    E-mail: felipe.medina@sptech.school
-                    Frase Dragon Ball
+                    <span>Feito por Felipe Medina <br></span>
+                    <span>E-mail: felipe.medina@sptech.school <br></span>
+                    <span>Sempre unidos vamos triunfar!</span>
                 </p>
             </div>
         </div>

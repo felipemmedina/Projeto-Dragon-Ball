@@ -5,15 +5,34 @@ const $questionText = document.querySelector(".question")
 const $nextQuestionButton = document.querySelector(".next-question")
 const $answers = document.querySelectorAll(".answer")
 
+const $getScoreButton = document.querySelector(".get-score")
+const $scoreContainer = document.querySelector(".score-container")
+
 $startGameButton.addEventListener("click", startGame)
 $nextQuestionButton.addEventListener("click", displayNextQuestion)
+$getScoreButton.addEventListener("click", getUserScore)
 
 let currentQuestionIndex = 0
 let totalCorrect = 0
 let level = ""
 
+const scoreMessages = {
+    0: { message: "Há muito que melhorar :(!", level: "YAMCHA" },
+    1: { message: "Você atingiu a forma base!", level: "FORMA BASE" },
+    2: { message: "Você atingiu o Kaioken!", level: "KAIOKEN" },
+    3: { message: "Você atingiu o Super Saiyajin!", level: "SUPER SAIYAJIN" },
+    4: { message: "Você atingiu o Super Saiyajin 2!", level: "SUPER SAIYAJIN 2" },
+    5: { message: "Você atingiu o Super Saiyajin 3!", level: "SUPER SAIYAJIN 3" },
+    6: { message: "Você atingiu o Super Saiyajin God!", level: "SUPER SAIYAJIN GOD" },
+    7: { message: "Você atingiu o Super Saiyajin Blue!", level: "SUPER SAIYAJIN BLUE" },
+    8: { message: "Você atingiu o Super Saiyajin Blue com Kaioken!", level: "SUPER SAIYAJIN BLUE COM KAIOKEN" },
+    9: { message: "Você atingiu o Instinto Superior Incompleto!", level: "INSTINTO SUPERIOR INCOMPLETO" },
+    10: { message: "Parabéns! Você atingiu o Instinto Superior!", level: "INSTINTO SUPERIOR" }
+};
+
 function startGame() {
     $startGameButton.classList.add("hide")
+    $getScoreButton.classList.add("hide")
     $questionsContainer.classList.remove("hide")
     displayNextQuestion()
 }
@@ -37,6 +56,7 @@ function displayNextQuestion() {
 
         newAnswer.addEventListener("click", selectAnswer)
     })
+    
 }
 
 function resetState() {
@@ -76,23 +96,31 @@ function finishGame() {
     try {
         saveUserScore();
 
-        renderQuizResult();
+        $questionsContainer.innerHTML = `
+            <p class="final-message">
+                Você acertou ${totalCorrect} de ${questions.length} questões!
+                <span>
+                    Resultado: ${scoreMessages[totalCorrect].message}
+                </span>
+            </p>
+        `
     } catch (error) {
         alert("Houve um erro ao finalizar o quiz!");
         console.log(`#ERRO: ${error}`);
+
+        window.location.reload();
     }
 }
 
 function saveUserScore() {
-    fetch("/pontuacoes/inserir", {
+    fetch("/pontuacoes/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
             idUsuario: sessionStorage.ID_USUARIO,
-            pontuacao: totalCorrect,
-            nivel: level
+            pontuacao: totalCorrect
         }),
     }).then(function (resposta) {
         console.log("resposta: ", resposta);
@@ -103,65 +131,45 @@ function saveUserScore() {
     })
 }
 
-function renderQuizResult() {
-    const totalQuestion = questions.length
-    const performance = Math.floor(totalCorrect * 100 / totalQuestion)
+function getUserScore() {
+    $startGameButton.classList.add("hide")
+    $getScoreButton.classList.add("hide")
+    $scoreContainer.classList.remove("hide")
 
-    let message = ""
+    var idUsuario = sessionStorage.ID_USUARIO
 
-    switch (true) {
-        case (performance === 100):
-            message = "Parabéns! Você atingiu o Instinto Superior!"
-            level = "INSTINTO SUPERIOR"
-            break
-        case (performance === 90):
-            message = "Você atingiu o Instinto Superior Incompleto!"
-            level = "INSTINTO SUPERIOR IMCOMPLETO"
-            break
-        case (performance === 80):
-            message = "Você atingiu o Super Saiyajin Blue com Kaioken!"
-            level = "SUPER SAIYAJIN BLUE COM KAIOKEN"
-            break
-        case (performance === 70):
-            message = "Você atingiu o Super Saiyajin Blue!"
-            level = "SUPER SAIYAJIN BLUE"
-            break
-        case (performance === 60):
-            message = "Você atingiu o Super Saiyajin God!"
-            level = "SUPER SAIYAJIN GOD"
-            break
-        case (performance === 50):
-            message = "Você atingiu o Super Saiyajin 3!"
-            level = "SUPER SAIYAJIN 3"
-            break
-        case (performance === 40):
-            message = "Você atingiu o Super Saiyajin 2!"
-            level = "SUPER SAIYAJIN 2"
-            break
-        case (performance === 30):
-            message = "Você atingiu o Super Saiyajin!"
-            level = "SUPER SAIYAJIN"
-            break
-        case (performance === 20):
-            message = "Você atingiu o Kaioken!"
-            level = "KAIOKEN"
-            break
-        case (performance === 10):
-            message = "Você atingiu a forma base!"
-            level = "FORMA BASE"
-            break
-        default:
-            message = "Há muito que melhorar :(!"
-    }
+    fetch(`/pontuacoes/${idUsuario}`).then(function (resposta) {
+        console.log("resposta: ", resposta);
 
-    $questionsContainer.innerHTML = `
-        <p class="final-message">
-            Você acertou ${totalCorrect} de ${totalQuestion} questões!
-            <span>
-                Resultado: ${message}
-            </span>
-        </p>
-    `
+        resposta.json().then(function (json) {
+            const firstScoreElement = document.getElementById("first-score")
+            const secondScoreElement = document.getElementById("second-score")
+            const thirdScoreElement = document.getElementById("third-score")
+
+            if (json[0] != null) {
+                const firstScore = json[0].pontos
+                const firstScoreLevel = scoreMessages[firstScore].level
+
+                firstScoreElement.textContent += `${firstScoreLevel} (${firstScore})`
+            } 
+
+            if (json[1] != null) {
+                const secondScore = json[1].pontos
+                const secondScoreLevel = scoreMessages[secondScore].level
+
+                secondScoreElement.textContent += `${secondScoreLevel} (${secondScore})`
+            } 
+
+            if (json [2] != null) {
+                const thirdScore = json[2].pontos
+                const thirdScoreLevel = scoreMessages[thirdScore].level
+
+                thirdScoreElement.textContent += `${thirdScoreLevel} (${thirdScore})`
+            }
+        })
+    }).catch(function (erro) {
+        console.log(erro);
+    })
 }
 
 const questions = [

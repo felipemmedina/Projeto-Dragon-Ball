@@ -37,6 +37,10 @@
     text-align: justify;
 }
 
+.obra__txt span {
+    font-weight: bold;
+}
+
 .container__div{
     left: 0;
     bottom: 0;
@@ -75,4 +79,117 @@
     left: 0;
     bottom: 0;
     z-index: -1;
+}
+
+.personagens__title{
+    color: #000000;
+    font-weight: 900;
+    font-size: 130px;
+    text-transform: uppercase;
+    text-align: justify;
+}
+
+.firstCardsContainer {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.secondCardsContainer {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    width: 20%;
+    height: 80%;
+    border: 2px solid #FF9922;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    width: 22%;
+    height: 85%;
+}
+
+.cardTitle {
+    width: 100%;
+    height: 20%;
+    background-color: #1C4595;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+}
+.imgGoku {
+    background-image: url(https://pbs.twimg.com/media/GIOboyqXIAIX6VM?format=png&name=900x900);
+    /* width: 100%;
+    height: 100%;
+    object-fit: cover; */
+}
+
+#graph{
+    background-color: #FFFFFF;
+}
+
+.imgVegeta {
+    background-image: url(https://pbs.twimg.com/media/FidlHpiXEAAVcoq?format=jpg&name=900x900);
+}
+
+.imgGohan {
+    background-image: url(https://pbs.twimg.com/media/GPPIRTeXMAE6XI5?format=jpg&name=900x900);
+    
+}
+
+.imgPiccolo {
+    background-image: url(https://assets.mycast.io/actor_images/actor-piccolo-dragon-ball-129934_large.jpg?1601272982);
+}
+
+.imgFrezza {
+    background-image: url(https://i.pinimg.com/564x/e8/e6/e2/e8e6e2e2995847bbc94d82141d820426.jpg);
+}
+
+.imgTrunks {
+    background-image: url(https://pbs.twimg.com/media/GMOX4LJWMAEfc2z?format=jpg&name=900x900);
+}
+
+.obra__title__onu{
+    color: #000000;
+    font-weight: 900;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: start;
+}
+
+.obra__n16{
+    width: 300px;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-right: 10%;
+    max-width: 300px;
+    max-height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 50px;
+    height: 100%;
+    overflow: hidden;
 }

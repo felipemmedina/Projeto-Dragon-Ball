@@ -42,20 +42,17 @@ function autenticar(req, res) {
 
 function cadastrar(req, res) {
     var nome = req.body.nome;
-    var dataNascimento = req.body.dataNascimento;
     var email = req.body.email;
     var senha = req.body.senha;
 
     if (nome == undefined) {
         res.status(400).send("Nome nao foi definido");
-    } else if (dataNascimento == undefined) {
-        res.status(400).send("Data de nascimento nao foi definida");
     } else if (email == undefined) {
         res.status(400).send("Email nao foi definido");
     } else if (senha == undefined) {
         res.status(400).send("Senha nao foi definida");
     } else {
-        usuarioModel.cadastrar(nome, dataNascimento, email, senha)
+        usuarioModel.cadastrar(nome, email, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);
